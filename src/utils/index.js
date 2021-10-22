@@ -1,10 +1,10 @@
 const { name, internet, random, datatype } = require("faker");
 const { number } = random;
-const { firstName, lastName, gender } = name;
-const { avatar, email } = internet;
+const { firstName, lastName } = name;
+const { email } = internet;
 
 function generateStudents(count) {
-  return new Array(count).fill(0).map((item, index) => {
+  return new Array(count).fill(0).map(() => {
     return {
       id: datatype.uuid(),
       firstName: firstName(),
